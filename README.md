@@ -1,16 +1,20 @@
-<!-- <link rel="stylesheet" type="text/css" href="./styles.css"></link> -->
-<style>
+<link rel="stylesheet" type="text/css" href="./styles.css"></link>
+<!-- <style>
   h3{
   color: red
 }
 .title.app-list-title.{
   background-color: aquamarine;
 }
-</style>
+</style> -->
+  
 
   # 👋 Kaixo!!
 
-  ### Ongi etorri Pantxiturri elkartearen software bildumara.
+  ## Ongi etorri Pantxiturri elkartearen software bildumara.
+
+  ### segundo...
+
   
 
 
