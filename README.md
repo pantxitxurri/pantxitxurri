@@ -1,4 +1,4 @@
-### 👋 Kaixo!
+### 👋 Kaixo!!
 ## Ongi etorri Pantxiturri elkartearen software bildumara.
 
 <!--
