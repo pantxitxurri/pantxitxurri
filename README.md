@@ -1,4 +1,5 @@
-### Hi there 👋
+### 👋 Kaixo!
+## Ongi etorri Pantxiturri elkartearen software bildumara.
 
 <!--
 **pantxitxurri/pantxitxurri** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
