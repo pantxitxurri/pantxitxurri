@@ -22,6 +22,7 @@
   </theader>
 </table>
 
+<img src="./images/Pantxi_Logo.png" width="200px"/>
 
 <!--
 **pantxitxurri/pantxitxurri** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
