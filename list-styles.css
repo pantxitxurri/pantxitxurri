@@ -1,0 +1,13 @@
+.accordion-items-container *{
+  margin-left: 1rem;
+ }
+
+ .accordion-items-container .bi {
+   font-size: 1.5rem;
+ }
+ .accordion-items-container img {
+   height: 1.5rem;
+ }
+ .navbar{
+  background-color: red;
+ }

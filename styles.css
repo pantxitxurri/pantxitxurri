@@ -1,8 +1,5 @@
 
-h3{
-  color: red
-}
-
-.title.app-list-title.{
-  background-color: aquamarine;
+div.container-md {
+  /* background-color: aqua; */
+  max-width: 800px;
 }
