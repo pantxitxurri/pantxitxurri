@@ -6,12 +6,52 @@ export const LABELS_MAP = {
   VIDE: "Bideo",
   PROG: "Programazioa",
   PLAY: "Jolasak",
-  PROD: "Tresnak",
   TEXT: "Testua",
-  CHIL: "Umeak"
+  CHIL: "Umeak",
+  OTHE: "Bestelakoak",
 
 }
 const data = [
+  {
+    name: "Brave",
+    description: "Interneterako nabigatzailea",
+    url:"https://brave.com/",
+    labels: ["OTHE",],
+    openSource: true,
+  
+  },
+  {
+    name: "Firefox",
+    description: "Interneterako nabigatzailea",
+    url:"https://www.mozilla.org/eu/",
+    labels: ["OTHE",],
+    openSource: true,
+  
+  },
+  {
+    name: "KeePass",
+    description: "Pasahitzak kudeatzeko aplikazio deskargagarria",
+    url:"https://keepass.info/",
+    labels: ["OTHE",],
+    openSource: true,
+  
+  },
+  {
+    name: "eXeLearning",
+    description: "Irakaskuntzarako edukiak sortzeko aplikazioa",
+    url:"https://exelearning.net/",
+    labels: ["EDUC",],
+    openSource: true,
+  
+  },
+  {
+    name: "Thunderbird",
+    description: "Emailak, kontaktuak eta egutegia kudeatzeko aplikazio deskargarria",
+    url:"https://www.thunderbird.net/es-ES/",
+    labels: ["OTHE",],
+    openSource: true,
+  
+  },
   {
     name: "Camstudio",
     description: "Windowsen pantailako bideo eta audio jarduerak grabatzeko",
@@ -40,7 +80,7 @@ const data = [
     name: "PDFCreator",
     description: "PDF artxiboekin lan egiteko aplikazioa",
     url:"https://www.pdfforge.org/pdfcreator/",
-    labels: ["PROD",],
+    labels: ["OTHE",],
     openSource: true,
   
   },
@@ -56,7 +96,7 @@ const data = [
     name: "Clamwin",
     description: "Antibirus deskargagarria",
     url:"http://es.clamwin.com/",
-    labels: ["PROD",],
+    labels: ["OTHE",],
     openSource: true,
   
   },
@@ -64,7 +104,7 @@ const data = [
     name: "OpenOffice",
     description: "Ofimatika aplikazio multzoa (testu editorea, kalkulu horriak, datu-basea...) ",
     url:"https://www.openoffice.org/",
-    labels: ["TEXT","PROD",],
+    labels: ["TEXT","OTHE",],
     openSource: true,
   
   },
@@ -155,7 +195,7 @@ const data = [
     name: "Bigbluebutton",
     description: "Irakasle zein ikaslei zuzendutako ikasgela birtuala.",
     url:"https://bigbluebutton.org/",
-    labels: ["PROD", "EDUC"],
+    labels: ["EDUC"],
     openSource: true,
 
   },

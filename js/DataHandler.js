@@ -41,11 +41,11 @@ class Resource{
     return this.#resource.labels.find(label=>label==="PROJ")
     
   }
-  isForProductivity(){
-    return this.#resource.labels.find(label=>label==="PROD")
-  }
   isForPlaying(){
     return this.#resource.labels.find(label=>label==="PLAY")
+  }
+  isForOtherThings(){
+    return this.#resource.labels.find(label=>label==="OTHE")
   }
   hasLabel(targetLabel){
     return this.#resource.labels.find(label=>label===targetLabel);
