@@ -20,6 +20,7 @@ function showAccordion (data){
      ${resource.isForDesign() ? ' <i class="bi bi-images" ></i>':""} 
      ${resource.isForTextEdition() ? ' <i class="bi bi-file-text" ></i>':""} 
      ${resource.isForProjects() ? ' <i class="bi bi-list-check" ></i>':""} 
+     ${resource.isForPlaying() ? ' <i class="bi bi-joystick" ></i>':""} 
      ${resource.isForProductivity() ? ' <i class="bi bi-wrench-adjustable" ></i>':""} 
     </div accordion-header-item>
     `

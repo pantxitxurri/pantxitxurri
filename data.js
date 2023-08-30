@@ -24,7 +24,7 @@ const data = [
     name: "Timeline",
     description: "Ekitaldiak sortu eta hauen denbora-lerroak bistaratzeko eta nabigatzeko aplikazioa",
     url:"https://getsharex.com/",
-    labels: ["PROJ",],
+    labels: ["PROJ"],
     openSource: true,
   
   },
@@ -48,7 +48,7 @@ const data = [
     name: "ToDoList",
     description: "Ataza-kudeatzailea",
     url:"https://www.abstractspoon.com/",
-    labels: ["PROJ",],
+    labels: ["PROJ"],
     openSource: true,
   
   },

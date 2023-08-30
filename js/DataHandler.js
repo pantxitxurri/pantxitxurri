@@ -44,6 +44,9 @@ class Resource{
   isForProductivity(){
     return this.#resource.labels.find(label=>label==="PROD")
   }
+  isForPlaying(){
+    return this.#resource.labels.find(label=>label==="PLAY")
+  }
   hasLabel(targetLabel){
     return this.#resource.labels.find(label=>label===targetLabel);
   }
@@ -53,21 +56,19 @@ export default class DataHandler{
   static #resources = data.sort((el1, el2)=>el1.name>el2.name ?1 :-1).map(el => new Resource(el));
   static #filters = new Set();
   static get data(){
-    console.log(this.#filters)
+    console.log(this.#filters, this.#resources.length)
     if(!this.#filters.size)return this.#resources;
-    const resources = this.#resources;
-    const filteredResources = [];
-    //Por cada filtro buscamos elementos y los quitamos del recorrido en caso de que se 
+    
+    const resourceMap= new Map(); //Para evitar duplicados
     for(let label of this.#filters){
-      for(let i=0; i<resources.length; i++){
-        const resource = resources[i];
+      for(let resource of this.#resources){
         if(resource.hasLabel(label)){
-         filteredResources.push(resource)
+         resourceMap.set(resource.name, resource)
+         
         }
       }
     }
-    console.log(filteredResources.length)
-    return filteredResources;
+    return resourceMap.values();
   }
   static addFilter(label){
     this.#filters.add(label);
