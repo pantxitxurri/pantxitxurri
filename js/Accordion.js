@@ -6,7 +6,7 @@ class AcordionHeader {
     this.#hEl = document.createElement("h2");
     this.#hEl.className = "accordion-header";
     const button = document.createElement("button");
-    button.className = "accordion-button";
+    button.className = "accordion-button  collapsed";
     button.type = "button";
     button.dataset.bsToggle = "collapse";
     this.#hEl.appendChild(button);
