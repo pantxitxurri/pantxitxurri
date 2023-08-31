@@ -1,14 +1,36 @@
 export const LABELS_MAP = {
-  EDUC: "Hezkuntza",
-  PROJ: "Proiektuak",
-  DESI: "Diseinua",
-  AUDI: "Audio",
-  VIDE: "Bideo",
-  PROG: "Programazioa",
-  PLAY: "Jolasak",
-  TEXT: "Testua",
-  CHIL: "Umeak",
-  OTHE: "Bestelakoak",
+  EDUC: {
+    name:"Hezkuntza"},
+  PROJ: {
+    name: "Proiektuak"
+  },
+  DESI: {
+    name: "Diseinua"
+  },
+  AUDI: {
+    name: "Audio"
+  },
+  VIDE: {
+    name: "Bideo"
+  },
+  PROG: {
+    name: "Programazioa"
+  },
+  PLAY: {
+    name: "Jolasak"
+  },
+  TEXT: {
+    name: "Testua"
+  },
+  CHIL: {
+    name: "Umeak"
+  },
+  WEB:{
+    name: "Internet"
+  },
+  OTHE: {
+    name: "Bestelakoak"
+  },
 
 }
 const data = [
@@ -16,7 +38,7 @@ const data = [
     name: "Brave",
     description: "Interneterako nabigatzailea",
     url:"https://brave.com/",
-    labels: ["OTHE",],
+    labels: ["WEB",],
     openSource: true,
   
   },
@@ -24,7 +46,7 @@ const data = [
     name: "Firefox",
     description: "Interneterako nabigatzailea",
     url:"https://www.mozilla.org/eu/",
-    labels: ["OTHE",],
+    labels: ["WEB",],
     openSource: true,
   
   },
@@ -48,7 +70,7 @@ const data = [
     name: "Thunderbird",
     description: "Emailak, kontaktuak eta egutegia kudeatzeko aplikazio deskargarria",
     url:"https://www.thunderbird.net/es-ES/",
-    labels: ["OTHE",],
+    labels: ["WEB",],
     openSource: true,
   
   },

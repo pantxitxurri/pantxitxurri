@@ -5,14 +5,12 @@ import data,{LABELS_MAP}from "../data.js";
 
 class Resource{
   #resource;
+  #findLabel = targetLabel => this.#resource.labels.find(label=>label===targetLabel);
   constructor(resource){
     this.#resource = resource;
   }
   get name(){
     return this.#resource.name || ""
-  }
-  isForChilds(){
-    return this.#resource.labels.find(label=>label==="CHIL")
   }
   get description(){
     return this.#resource.description || "Ez da deskribapenik aurkitu...";
@@ -20,45 +18,47 @@ class Resource{
   get url(){
     return this.#resource.url || "#"
   }
-  isEducative(){
-    return this.#resource.labels.find(label=>label==="EDUC")
+  get isForChilds(){
+    return this.#findLabel("CHIL")
   }
-  isForAudio(){
-    return this.#resource.labels.find(label=>label==="AUDI")
+  get isEForWeb(){
+    return this.#findLabel("WEB")
   }
-  isForVideo(){
-    return this.#resource.labels.find(label=>label==="VIDE")
+  get isEducative(){
+    return this.#findLabel("EDUC")
   }
-  isForDesign(){
-    return this.#resource.labels.find(label=>label==="DESI")
+  get isForAudio(){
+    return this.#findLabel("AUDI")
+  }
+  get isForVideo(){
+    return this.#findLabel("VIDE")
+  }
+  get isForDesign(){
+    return this.#findLabel("DESI")
   }
   
-  isForTextEdition(){
-    return this.#resource.labels.find(label=>label==="TEXT")
+  get isForTextEdition(){
+    return this.#findLabel("TEXT")
     
   }
-  isForProjects(){
-    return this.#resource.labels.find(label=>label==="PROJ")
+  get isForProjects(){
+    return this.#findLabel("PROJ")
     
   }
-  isForPlaying(){
-    return this.#resource.labels.find(label=>label==="PLAY")
+  get isForPlaying(){
+    return this.#findLabel("PLAY")
   }
-  isForOtherThings(){
-    return this.#resource.labels.find(label=>label==="OTHE")
+  get isForOtherThings(){
+    return this.#findLabel("OTHE")
   }
   hasLabel(targetLabel){
-    return this.#resource.labels.find(label=>label===targetLabel);
+    return this.#findLabel(targetLabel);
   }
 }
 
 export default class DataHandler{
   static #resources = data.sort((el1, el2)=>el1.name>el2.name ?1 :-1).map(el => new Resource(el));
-  static #filters = new Set();
-  static get data(){
-    console.log(this.#filters, this.#resources.length)
-    if(!this.#filters.size)return this.#resources;
-    
+  static #filteredResources = ()=> {
     const resourceMap= new Map(); //Para evitar duplicados
     for(let label of this.#filters){
       for(let resource of this.#resources){
@@ -69,6 +69,12 @@ export default class DataHandler{
       }
     }
     return resourceMap.values();
+  }
+  static #filters = new Set();
+  static get data(){
+    // console.log(this.#filters, this.#resources.length)
+    return this.#filters.size ? this.#filteredResources() : this.#resources ;
+  
   }
   static addFilter(label){
     this.#filters.add(label);
