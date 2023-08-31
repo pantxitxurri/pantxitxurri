@@ -21,7 +21,7 @@ class Resource{
   get isForChilds(){
     return this.#findLabel("CHIL")
   }
-  get isEForWeb(){
+  get isForWeb(){
     return this.#findLabel("WEB")
   }
   get isEducative(){

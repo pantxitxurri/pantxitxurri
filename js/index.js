@@ -1,7 +1,7 @@
 
 import DataHandler from "./DataHandler.js";
 import { showAccordion } from "./helpers.js";
-
+import * as boostrap from "../node_modules/bootstrap/dist/js/bootstrap.esm.js";
 
 const container = document.querySelector(".container");
 
@@ -38,4 +38,4 @@ for(let label in labelsMap ){
 showAccordion(container, DataHandler.data);
 const modal = document.querySelector(".modal");
 
-console.dir(modal)
+//console.dir(modal)

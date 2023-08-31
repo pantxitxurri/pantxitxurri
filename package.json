@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "description": "<link rel=\"stylesheet\" type=\"text/css\" href=\"./styles.css\"></link>\r <!-- <style>\r   h3{\r   color: red\r }\r .title.app-list-title.{\r   background-color: aquamarine;\r }\r </style> -->",
   "main": "data.js",
-  "dependencies": {},
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/pantxitxurri/pantxitxurri/issues"
   },
-  "homepage": "https://github.com/pantxitxurri/pantxitxurri#readme"
+  "homepage": "https://github.com/pantxitxurri/pantxitxurri#readme",
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.1"
+  }
 }

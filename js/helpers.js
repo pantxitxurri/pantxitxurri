@@ -1,4 +1,5 @@
 import Accordion from "./Accordion.js";
+import BsModal from "./Modal.js";
 
 
 /**
@@ -17,12 +18,13 @@ export function showAccordion (parentNode, data=[]){
     <div class="accordion-items-container">
      ${resource.isForChilds ? ' <img src="./images/childs.png" >':""} 
      ${resource.isEducative ? ' <i class="bi bi-mortarboard" ></i>':""} 
+     ${resource.isForPlaying ? ' <i class="bi bi-joystick" ></i>':""} 
+     ${resource.isForWeb ? ' <i class="bi bi-cloud-check" ></i>':""} 
      ${resource.isForAudio ? ' <i class="bi bi-music-note-list" ></i>':""} 
      ${resource.isForVideo ? ' <i class="bi bi-camera-reels" ></i>':""} 
      ${resource.isForDesign ? ' <i class="bi bi-images" ></i>':""} 
      ${resource.isForTextEdition ? ' <i class="bi bi-file-text" ></i>':""} 
      ${resource.isForProjects ? ' <i class="bi bi-list-check" ></i>':""} 
-     ${resource.isForPlaying ? ' <i class="bi bi-joystick" ></i>':""} 
      ${resource.isForOtherThings ? ' <i class="bi bi-wrench-adjustable" ></i>':""} 
     </div accordion-header-item>
     `
@@ -35,3 +37,18 @@ export function showAccordion (parentNode, data=[]){
   }
   parentNode.append(accordion.getEl())
 }
+
+
+function handleFilters(triggerEl){
+  document.querySelector
+
+}
+
+
+export function createDOMEl(type, className=""){
+  const el = document.createElement(type);
+  el.className = className;
+  return el;
+}
+
+

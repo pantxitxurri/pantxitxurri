@@ -38,7 +38,7 @@ class AccordionItem {
   #button;
 
   constructor() {
-    const collapseId = crypto.randomUUID();
+    const collapseId = 'x'+ crypto.randomUUID(); //Para asegurarnos de que siempre empieza por una letra
     this.#header = new AcordionHeader();
     this.#collapse = new AccordionCollapse();
     this.#divEl = document.createElement("div");
@@ -73,7 +73,7 @@ export default class Accordion {
   addItem(headerContent, bodyContent) {
     if (!this.#divEl) {
       this.#divEl = document.createElement("div");
-      this.#divEl.id = crypto.randomUUID();
+      this.#divEl.id = 'x'+crypto.randomUUID();
       this.#divEl.className = "accordion";
     }
     const item = new AccordionItem();
