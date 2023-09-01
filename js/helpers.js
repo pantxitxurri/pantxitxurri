@@ -1,5 +1,5 @@
 import Accordion from "./Accordion.js";
-import BsModal from "./Modal.js";
+import AppModal from "./Modal.js";
 
 
 /**
@@ -39,8 +39,11 @@ export function showAccordion (parentNode, data=[]){
 }
 
 
-function handleFilters(triggerEl){
-  document.querySelector
+export function handleFilters(){
+  const modal = new AppModal(document.body);
+  console.log(modal.id)
+  modal.addContent('Hola mundo');
+  modal.show();
 
 }
 

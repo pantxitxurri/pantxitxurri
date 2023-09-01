@@ -1,9 +1,16 @@
 
 import DataHandler from "./DataHandler.js";
-import { showAccordion } from "./helpers.js";
+import { handleFilters, showAccordion } from "./helpers.js";
 import * as boostrap from "../node_modules/bootstrap/dist/js/bootstrap.esm.js";
+import AppModal from "./Modal.js";
 
 const container = document.querySelector(".container");
+const filterBtn = document.getElementById('filterBtn');
+//Creamos el modal que es único para toda la aplicación (Singleton)
+
+new AppModal(container);
+
+filterBtn.addEventListener('click', handleFilters)
 
 const navbar = document.querySelector(".collapse.navbar-collapse");
 const labelsMap = DataHandler.labels;
