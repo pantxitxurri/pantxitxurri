@@ -21,7 +21,7 @@ export const LABELS_MAP = {
   },
   VIDE: {
     name: "Bideo",
-    description: "Bideoa erlazioa duten baliabideak, edizioa, erreprodukzioa, kapturak...",
+    description: "Bideoarekin erlazioa duten baliabideak, edizioa, erreprodukzioa, kapturak...",
     bsEl: '<i class="bi bi-camera-reels" ></i>',
   },
   PROG: {

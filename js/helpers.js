@@ -37,16 +37,20 @@ export function showAccordion(parentNode, data = []) {
 export function showFilters(parentEl, data, activeFilter) {
   // console.log(activeFilter);
   parentEl.innerHTML = "";
+  const ul = document.createElement("ul");
+  ul.className = "list-group";
   for (let el in data) {
-    const ul = document.createElement("ul");
-    ul.className = "list-group";
     const label = data[el];
+    const listItem = document.createElement("li");
+
     const filterBtn = document.createElement("button");
-    filterBtn.classList = el === activeFilter ? "btn btn-success mb-1" : "btn btn-outline-dark mb-1";
     filterBtn.dataset.filterLabel = el;
     filterBtn.innerHTML += label.bsEl || `<span>${label.name}</span>`;
     filterBtn.append(label.description || "");
-    ul.appendChild(filterBtn);
+    listItem.innerHTML = label.bsEl + `<span data-filter-label="${el}">&nbsp&nbsp&nbsp${label.description}</span>`;
+    listItem.dataset.filterLabel = el;
+    listItem.className = el === activeFilter ? "list-group-item active" : "list-group-item";
+    ul.appendChild(listItem);
     parentEl.append(ul);
   }
 }
