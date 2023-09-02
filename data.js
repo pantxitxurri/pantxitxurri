@@ -1,47 +1,47 @@
 export const LABELS_MAP = {
   EDUC: {
     name: "Hezkuntza",
-    bsEl: ' <i class="bi bi-mortarboard" ></i>',
+    bsEl: '<i class="bi bi-mortarboard" ></i>',
   },
   PROJ: {
     name: "Proiektuak",
-    bsEl: ' <i class="bi bi-list-check" ></i>',
+    bsEl: '<i class="bi bi-list-check" ></i>',
   },
   DESI: {
     name: "Diseinua",
-    bsEl: ' <i class="bi bi-images" ></i>',
+    bsEl: '<i class="bi bi-images" ></i>',
   },
   AUDI: {
     name: "Audio",
-    bsEl: ' <i class="bi bi-music-note-list" ></i>',
+    bsEl: '<i class="bi bi-music-note-list" ></i>',
   },
   VIDE: {
     name: "Bideo",
-    bsEl: ' <i class="bi bi-camera-reels" ></i>',
+    bsEl: '<i class="bi bi-camera-reels" ></i>',
   },
   PROG: {
     name: "Programazioa",
-    bsEl: ' <i class="bi bi-joystick" ></i>',
+    bsEl: '<i class="bi bi-motherboard"></i>',
   },
   PLAY: {
     name: "Jolasak",
-    bsEl: ' <i class="bi bi-joystick" ></i>',
+    bsEl: '<i class="bi bi-joystick" ></i>',
   },
   TEXT: {
     name: "Testua",
-    bsEl: ' <i class="bi bi-file-text" ></i>',
+    bsEl: '<i class="bi bi-file-text" ></i>',
   },
   CHIL: {
     name: "Umeak",
-    bsEl: ' <img src="./images/childs.png" >',
+    bsEl: '<img src="./images/childs.png" >',
   },
   WEB: {
     name: "Internet",
-    bsEl: ' <i class="bi bi-cloud-check" ></i>',
+    bsEl: '<i class="bi bi-cloud-check" ></i>',
   },
   OTHE: {
     name: "Bestelakoak",
-    bsEl: ' <i class="bi bi-wrench-adjustable" ></i>',
+    bsEl: '<i class="bi bi-wrench-adjustable" ></i>',
   },
 };
 const data = [

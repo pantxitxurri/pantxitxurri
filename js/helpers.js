@@ -34,15 +34,18 @@ export function showAccordion(parentNode, data = []) {
   parentNode.append(accordion.getEl());
 }
 
-export function handleFilters(parentEl, data, callback) {
-  // console.log(data);
-  const div = document.createElement("div");
+export function showFilters(parentEl, data, activeFilter) {
+  // console.log(activeFilter);
+  parentEl.innerHTML = "";
   for (let el in data) {
+    const div = document.createElement("div");
+    if (el === activeFilter) div.classList.add("alert", "alert-success");
     const label = data[el];
-    console.log(label.bsEl || `${label.name}\n`);
+    div.dataset.filterLabel = el;
     div.innerHTML += label.bsEl || `${label.name}\n`;
+    if (div.firstChild.dataset) div.firstChild.dataset.filterLabel = el;
+    parentEl.append(div);
   }
-  parentEl.append(div);
 }
 
 export function createDOMEl(type, className = "") {
