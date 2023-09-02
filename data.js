@@ -1,46 +1,57 @@
 export const LABELS_MAP = {
   EDUC: {
     name: "Hezkuntza",
+    description: "Irakasle zein ikasleentzako, hezkuntzarako baliabideak",
     bsEl: '<i class="bi bi-mortarboard" ></i>',
   },
   PROJ: {
     name: "Proiektuak",
+    description: "Proiektu eta ataza kudeaketarako baliabideak",
     bsEl: '<i class="bi bi-list-check" ></i>',
   },
   DESI: {
     name: "Diseinua",
+    description: "Irudien kudeaketa, diseinu grafikoa, UI/UX...",
     bsEl: '<i class="bi bi-images" ></i>',
   },
   AUDI: {
     name: "Audio",
+    description: "Soinuarekin erlazioa duten baliabideak, edizioa, erreprodukzioa, kapturak...",
     bsEl: '<i class="bi bi-music-note-list" ></i>',
   },
   VIDE: {
     name: "Bideo",
+    description: "Bideoa erlazioa duten baliabideak, edizioa, erreprodukzioa, kapturak...",
     bsEl: '<i class="bi bi-camera-reels" ></i>',
   },
   PROG: {
     name: "Programazioa",
+    description: "Sistema eragileak eta software garapena",
     bsEl: '<i class="bi bi-motherboard"></i>',
   },
   PLAY: {
     name: "Jolasak",
+    description: "Jolasak eta gamifikatutako aplikazioak",
     bsEl: '<i class="bi bi-joystick" ></i>',
   },
   TEXT: {
     name: "Testua",
+    description: "Testu edizioa edo eta maketazioa",
     bsEl: '<i class="bi bi-file-text" ></i>',
   },
   CHIL: {
     name: "Umeak",
+    description: "Umeei zuzendutako baliabideak",
     bsEl: '<img src="./images/childs.png" >',
   },
   WEB: {
     name: "Internet",
+    description: "Nabigatzaileak, email kudeatzaileak...",
     bsEl: '<i class="bi bi-cloud-check" ></i>',
   },
   OTHE: {
     name: "Bestelakoak",
+    description: "Beste kategorietan sailkatuta ez dagoena",
     bsEl: '<i class="bi bi-wrench-adjustable" ></i>',
   },
 };

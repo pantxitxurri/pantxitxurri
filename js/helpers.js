@@ -38,13 +38,16 @@ export function showFilters(parentEl, data, activeFilter) {
   // console.log(activeFilter);
   parentEl.innerHTML = "";
   for (let el in data) {
-    const div = document.createElement("div");
-    if (el === activeFilter) div.classList.add("alert", "alert-success");
+    const ul = document.createElement("ul");
+    ul.className = "list-group";
     const label = data[el];
-    div.dataset.filterLabel = el;
-    div.innerHTML += label.bsEl || `${label.name}\n`;
-    if (div.firstChild.dataset) div.firstChild.dataset.filterLabel = el;
-    parentEl.append(div);
+    const filterBtn = document.createElement("button");
+    filterBtn.classList = el === activeFilter ? "btn btn-success mb-1" : "btn btn-outline-dark mb-1";
+    filterBtn.dataset.filterLabel = el;
+    filterBtn.innerHTML += label.bsEl || `<span>${label.name}</span>`;
+    filterBtn.append(label.description || "");
+    ul.appendChild(filterBtn);
+    parentEl.append(ul);
   }
 }
 
