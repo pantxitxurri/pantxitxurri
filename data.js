@@ -57,6 +57,20 @@ export const LABELS_MAP = {
 };
 const data = [
   {
+    name: "FreeCodeCamp",
+    description: "9.000 programazio ikastaro baino gehiago biltzen dituen orrialdea",
+    url: "https://freecodecamp.org/",
+    labels: ["PROG", "EDU"],
+    openSource: true,
+  },
+  {
+    name: "Linux",
+    description: "Linux sistema eragilearen inguruko orrialdea. Artikuloak, tutorialak, distribuzioen deskarga...",
+    url: "https://linux.org/",
+    labels: ["PROG"],
+    openSource: true,
+  },
+  {
     name: "Brave",
     description: "Interneterako nabigatzailea",
     url: "https://brave.com/",
@@ -173,7 +187,7 @@ const data = [
     name: "Scratch",
     description: "Istorioak, jolasak eta animazioak sortu eta elkarbanatu programazioa ikasten duten bitartean",
     url: "https://scratch.mit.edu/",
-    labels: ["PROG", "CHIL"],
+    labels: ["PROG", "CHIL", "EDU"],
     openSource: true,
   },
   {

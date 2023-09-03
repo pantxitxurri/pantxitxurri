@@ -43,6 +43,9 @@ class Resource {
   get isForPlaying() {
     return this.#findLabel("PLAY");
   }
+  get isForProgram() {
+    return this.#findLabel("PROG");
+  }
   get isForOtherThings() {
     return this.#findLabel("OTHE");
   }

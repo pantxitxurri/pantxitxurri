@@ -22,6 +22,7 @@ export function showAccordion(parentNode, data = []) {
      ${resource.isForDesign ? ' <i class="bi bi-images" ></i>' : ""} 
      ${resource.isForTextEdition ? ' <i class="bi bi-file-text" ></i>' : ""} 
      ${resource.isForProjects ? ' <i class="bi bi-list-check" ></i>' : ""} 
+     ${resource.isForProgram ? ' <i class="bi bi-motherboard" ></i>' : ""} 
      ${resource.isForOtherThings ? ' <i class="bi bi-wrench-adjustable" ></i>' : ""} 
     </div accordion-header-item>
     `;
@@ -49,7 +50,7 @@ export function showFilters(parentEl, data, activeFilter) {
     filterBtn.append(label.description || "");
     listItem.innerHTML = label.bsEl + `<span data-filter-label="${el}">&nbsp&nbsp&nbsp${label.description}</span>`;
     listItem.dataset.filterLabel = el;
-    listItem.className = el === activeFilter ? "list-group-item active" : "list-group-item";
+    listItem.className = el === activeFilter ? "list-group-item list-group-item-success" : "list-group-item";
     ul.appendChild(listItem);
     parentEl.append(ul);
   }
