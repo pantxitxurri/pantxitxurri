@@ -115,7 +115,7 @@ const data = [
   {
     name: "Timeline",
     description: "Ekitaldiak sortu eta hauen denbora-lerroak bistaratzeko eta nabigatzeko aplikazioa",
-    url: "https://getsharex.com/",
+    url: "https://thetimelineproj.sourceforge.net/about.html",
     labels: ["PROJ"],
     openSource: true,
   },
