@@ -7,39 +7,42 @@ const container = document.querySelector(".container");
 const filterBtn = document.getElementById("filterBtn");
 const modal = window.bootstrap.Modal.getOrCreateInstance("#appModal");
 let activeFilter;
-const clearFiltersBtn = document.getElementById("clearFilters");
+const clearFilterBtn = document.getElementById("clearFilter");
 
 const clearFilters = () => {
-  console.log("clear");
-  DataHandler.clearFilters();
+  // console.log("clear");
+  DataHandler.filter = null;
   activeFilter = null;
   document.querySelector(".accordion")?.remove();
   showAccordion(container, DataHandler.data);
-  modal.hide();
+  clearFilterBtn.classList.add("visually-hidden");
+};
+
+clearFilterBtn.addEventListener("click", clearFilters);
+
+const handleModalBody = ({ target }) => {
+  // console.log(target.dataset);
+  if (target?.dataset.filterLabel) {
+    activeFilter = target?.dataset.filterLabel;
+    handleFilter(activeFilter);
+  }
 };
 
 const handleFilter = filterLabel => {
   document.querySelector(".accordion")?.remove();
   DataHandler.filter = filterLabel;
-  // console.log(DataHandler.data);
+  console.log(DataHandler.filter);
+  document.querySelector(".modal-body").removeEventListener("click", handleModalBody);
   modal.hide();
-  clearFiltersBtn.removeEventListener("click", clearFilters);
+  clearFilterBtn.innerHTML = `<i class='bi bi-x-circle-fill'></i>${DataHandler.filterBsEl}`;
+  clearFilterBtn.classList.remove("visually-hidden");
   document.querySelector(".accordion")?.remove();
   showAccordion(container, DataHandler.data);
 };
 
 filterBtn.addEventListener("click", () => {
-  // console.log(clearFiltersBtn);
-  clearFiltersBtn.addEventListener("click", clearFilters);
   modal.show();
-  const modalBody = document.querySelector(".modal-body").addEventListener("click", ({ target }) => {
-    // console.log(target.dataset);
-    if (target?.dataset.filterLabel) {
-      activeFilter = target?.dataset.filterLabel;
-      handleFilter(activeFilter);
-    }
-  });
-
+  document.querySelector(".modal-body").addEventListener("click", handleModalBody);
   showFilters(document.querySelector(".modal-body"), LABELS_MAP, activeFilter);
 });
 

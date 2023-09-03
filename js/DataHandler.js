@@ -56,43 +56,35 @@ class Resource {
 
 export default class DataHandler {
   static #resources = data.sort((el1, el2) => (el1.name > el2.name ? 1 : -1)).map(el => new Resource(el));
-  static #filteredResources = () => {
-    const resourceMap = new Map(); //Para evitar duplicados
-    for (let label of this.#filters) {
-      for (let resource of this.#resources) {
-        if (resource.hasLabel(label)) {
-          resourceMap.set(resource.name, resource);
-        }
-      }
-    }
-    return resourceMap.values();
-  };
-  static #filters = new Set();
+  // static #filteredResources = () => {
+  //   const resourceMap = new Map(); //Para evitar duplicados
+  //   for (let label of this.#filters) {
+  //     for (let resource of this.#resources) {
+  //       if (resource.hasLabel(label)) {
+  //         resourceMap.set(resource.name, resource);
+  //       }
+  //     }
+  //   }
+  //   return resourceMap.values();
+  // };
+  static #filter = null;
   static get data() {
     // console.log(this.#filters, this.#resources.length)
-    return this.#filters.size ? this.#filteredResources() : this.#resources;
-  }
-  static addFilter(label) {
-    this.#filters.add(label);
-
-    console.log(this.#filters);
-    return this;
+    return this.#filter ? this.#resources.filter(resource => resource.hasLabel(this.#filter)) : this.#resources;
   }
 
-  static removeFilter(label) {
-    this.#filters.delete(label);
-    return this;
+  static get filter() {
+    return this.#filter;
   }
+  static get filterBsEl() {
+    return this.#filter ? LABELS_MAP[this.#filter].bsEl : null;
+  }
+
   static set filter(label) {
-    this.clearFilters();
-    this.#filters.add(label);
+    this.#filter = label;
     // console.log(this.#filteredResources());
   }
 
-  static clearFilters() {
-    this.#filters.clear();
-    return this;
-  }
   static get labels() {
     return LABELS_MAP;
   }

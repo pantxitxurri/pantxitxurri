@@ -48,7 +48,7 @@ export function showFilters(parentEl, data, activeFilter) {
     filterBtn.dataset.filterLabel = el;
     filterBtn.innerHTML += label.bsEl || `<span>${label.name}</span>`;
     filterBtn.append(label.description || "");
-    listItem.innerHTML = label.bsEl + `<span data-filter-label="${el}">&nbsp&nbsp&nbsp${label.description}</span>`;
+    listItem.innerHTML = label.bsEl + `<span class="text-secondary" data-filter-label="${el}">&nbsp&nbsp&nbsp${label.description}</span>`;
     listItem.dataset.filterLabel = el;
     listItem.className = el === activeFilter ? "list-group-item list-group-item-success" : "list-group-item";
     ul.appendChild(listItem);

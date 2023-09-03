@@ -1,4 +1,9 @@
 export const LABELS_MAP = {
+  CHIL: {
+    name: "Umeak",
+    description: "Umeei zuzendutako baliabideak",
+    bsEl: '<img src="./images/childs.png" >',
+  },
   EDUC: {
     name: "Hezkuntza",
     description: "Irakasle zein ikasleentzako, hezkuntzarako baliabideak",
@@ -39,16 +44,13 @@ export const LABELS_MAP = {
     description: "Testu edizioa edo eta maketazioa",
     bsEl: '<i class="bi bi-file-text" ></i>',
   },
-  CHIL: {
-    name: "Umeak",
-    description: "Umeei zuzendutako baliabideak",
-    bsEl: '<img src="./images/childs.png" >',
-  },
+
   WEB: {
     name: "Internet",
     description: "Nabigatzaileak, email kudeatzaileak...",
     bsEl: '<i class="bi bi-cloud-check" ></i>',
   },
+
   OTHE: {
     name: "Bestelakoak",
     description: "Beste kategorietan sailkatuta ez dagoena",
