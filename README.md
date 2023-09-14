@@ -11,9 +11,7 @@
 
   # 👋 Kaixo!!
 
-  ## Ongi etorri Pantxiturri elkartearen software bildumara.
-
-  ### segundo...
+  ## Ongi etorri Pantxiturri elkartearen software bildumara
 
   
 
@@ -21,17 +19,8 @@
 
 <!-- ![Gure Logoa](.\images\Pantxi_Logo.png) -->
 
-<h3 class="title app-list-title">Umeentzeko aplikazio ezigarriak</h3>
 
-<table class="table index-table">
-  <theader>
-  <td>
-  <a>Umeentzeko aplikazio hezigarriak</a
-  </td>
 
-  <td>Deskribapena</td>
-  </theader>
-</table>
 
 <img src="./images/Pantxi_Logo.png" width="200px"/>
 
